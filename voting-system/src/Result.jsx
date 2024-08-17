@@ -87,7 +87,7 @@ const Result = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing.
           </Text>
           <Link to="/vote">
-            <Button color="#1c2d5c" fullWidth mt="md" radius="md">
+            <Button disabled color="#1c2d5c" fullWidth mt="md" radius="md">
               Check Result
             </Button>
           </Link>
