@@ -1,4 +1,4 @@
-import { AppShell, Avatar, Burger, NavLink, Menu,rem } from '@mantine/core';
+import { AppShell, Avatar, Burger, NavLink, Menu, rem } from '@mantine/core';
 import { IconChartBar, IconHistory, IconChevronRight, IconLogout } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 import { useState } from 'react';
