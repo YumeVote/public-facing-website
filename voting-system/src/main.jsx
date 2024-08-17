@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import Result from './Result.jsx'
 import History from './History.jsx'
 import Vote from './Vote.jsx'
+import { AuthProvider } from './AuthContext.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -27,8 +28,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <RouterProvider router={router} />
-    </MantineProvider>
+    <AuthProvider>
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <RouterProvider router={router} />
+      </MantineProvider>
+    </AuthProvider>
   </StrictMode>,
 )
