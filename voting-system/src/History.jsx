@@ -32,7 +32,7 @@ const History = () => {
     element.Vote.toLowerCase().includes(value.toLowerCase()) ||
     element.VoteDigitalSignature.toLowerCase().includes(value.toLowerCase()) ||
     element.IdentityDigitalSignature.toLowerCase().includes(value.toLowerCase())
-  );  
+  );
 
   const rows = filteredData.map((element) => (
     <Table.Tr 
