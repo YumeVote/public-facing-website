@@ -27,7 +27,14 @@ const History = () => {
     fetchData();
   }, []);
   
-  const rows = data.map((element) => (
+  const filteredData = data.filter(element => 
+    element.ID.toString().includes(value) ||
+    element.Vote.toLowerCase().includes(value.toLowerCase()) ||
+    element.VoteDigitalSignature.toLowerCase().includes(value.toLowerCase()) ||
+    element.IdentityDigitalSignature.toLowerCase().includes(value.toLowerCase())
+  );  
+
+  const rows = filteredData.map((element) => (
     <Table.Tr 
       key={element.id}
       onClick={() => {
